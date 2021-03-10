@@ -1,10 +1,14 @@
 <script>
 let someText = 'FullStack Developer';
+let count = 0;
+
+    function handleClick(){
+        count+=1;
+    }
+
 </script>
 
 <style>
-/*Estilos**/
-
 p{
     color: var(--theme-color);
 }
@@ -14,4 +18,6 @@ p{
     <p>
         {someText}
     </p>
+    <button on:click={handleClick}>Clicks {count == 0 ? '': count}</button>
+
 </div>

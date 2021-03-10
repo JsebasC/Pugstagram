@@ -1,4 +1,5 @@
 <script>
+	import About from "./components/About.svelte";
 	export let saludo;
 	export let Name;
 	export let lastName;	
@@ -7,7 +8,7 @@
 
 <main>
 	<h1>Hello {saludo} {Name} {lastName}! </h1>
-	<p>Backend Develpor</p>
+	<About/>
 	<img src={img} alt="Svelte">
 </main>
 
@@ -19,35 +20,11 @@
 	}
 
 	:global(:root){
-		--theme-color:Black	;
+		--theme-color:Purple;
 	}
 
 	p{
 		color: var(--theme-color);
 	}
 
-
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	main img{
-		width: 30%;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
 </style>
