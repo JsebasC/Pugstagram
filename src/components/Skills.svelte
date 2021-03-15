@@ -1,0 +1,33 @@
+<script>
+let skills = [
+    {
+        id: 1,
+        name : 'Html'
+    },
+    {
+        id:2,
+        name:'Css'
+    },
+    {
+        id:3,
+        name:'JavaScript'
+    }
+]
+
+</script>
+
+<style>
+    .Skills{
+        display:flex;
+     
+    }
+</style>
+
+<div class="Skills">
+{#each skills as skill,i}
+    <ul>
+        <li> {skill.id} = {skill.name}</li>
+    </ul>   
+{/each}
+<br>
+</div>

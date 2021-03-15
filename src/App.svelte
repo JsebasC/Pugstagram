@@ -2,10 +2,11 @@
 	import About from "./components/About.svelte";
 	import Text from "./components/Text.svelte";
 	import Person from "./components/Person.svelte";
+	import Skills from "./components/Skills.svelte";
 
 	export let saludo;
-	export let Name1;
-	export let lastName1;	
+	export let Name;
+	export let lastName;	
 	export let Age;	
 	let img = "https://i.blogs.es/aa1b9a/luna-100mpx/450_1000.jpg";
 
@@ -19,12 +20,13 @@
 </script>
 
 <main>
-	<h1>Hello {saludo} {Name1} {lastName1}! </h1>
+	<h1>Hello {saludo} {Name} {lastName}! </h1>
 	<About/>
 	<Text anotherText="Prueba"/>
 	<Text />
 	<Person name={data.name} lastName={data.lastName} age={data.age}/>
 	<Person {...data} />
+	<Skills/>
 	<img src={img} alt="Svelte">
 </main>
 
@@ -34,6 +36,12 @@
 		background-color: #f2eeef;
 		color : #0084f6;		
 	}
+
+	:global(body.dark-mode){
+		background-color: rgba(18, 15, 56, 0.836);
+		color: #f2eeef;
+	}
+
 
 	:global(:root){
 		--theme-color:Purple;
