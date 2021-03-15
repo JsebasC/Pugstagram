@@ -8,6 +8,7 @@
 	import Skills from "./components/Skills.svelte";
 	import Input from "./components/Input.svelte"
 	import Photos from "./components/Photos.svelte";
+	import ButtonCount from "./components/ButtonCount.svelte";
 
 	export let saludo;
 	export let Name;
@@ -43,9 +44,14 @@
 	
 	<Input/> <!--Input para agregar un valor y ese se vea reflejado en el dom en realtime-->
 
-	<img src={img} alt="Svelte">
+	<ButtonCount/> <!--Componente que tiene la logica de una variable reactiva manejada desde un store-->
 	
+	<br>
+
+	<img src={img} alt="Svelte">
+
 	<Photos/> <!-- Componenten que consume un api de fotos-->
+
 
 </main>
 <!--******************************************************-->
