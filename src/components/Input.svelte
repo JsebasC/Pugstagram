@@ -1,11 +1,14 @@
+
 <!--******************************************************-->
 <script>
-export let name;
-export let lastName;
-export let age;
+    export let name = "World";
 </script>
+
 <!--******************************************************-->
 <!--******************************************************-->
-<div class="Person">
-    <p>{name} {lastName} {age}</p>
+<div class="Input">
+    <!--Escuchando variable-->
+    <input type="text" bind:value={name}>
+    <p>Hello {name}!</p>
+
 </div>
