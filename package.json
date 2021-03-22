@@ -8,8 +8,7 @@
     "build": "sapper build",
     "export": "sapper export",
     "start": "node __sapper__/build"
-  },
-  "author": "Oscar Barajas <oscar@platzi.com>",
+  }, 
   "license": "MIT",
   "dependencies": {
     "compression": "^1.7.4",
