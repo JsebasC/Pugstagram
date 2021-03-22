@@ -1,0 +1,42 @@
+
+const path = require('path');
+/*MOVER UN ARCHIVO HTML A OTRO LUGAR CON CIERTAS CONFIGURACIONES */
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+
+module.exports = {
+    entry: './src/index.js',
+    output: { /*PARA MANDAR LOS ARCHIVOS COMPILADOS ANTES DE PRODUCCION */
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    resolve: {
+        extensions: ['*','.mjs','.js','.svelte']
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.svelte$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'svelte-loader'
+                }
+            }                            
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            inject: true,
+            template: './public/index.html',
+            filename:'./index.html'
+        })
+    ]
+
+}
